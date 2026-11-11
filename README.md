@@ -3,6 +3,7 @@ This complete guide covers setup, file structures, webhook configuration, and ex
 ## 🛠️ Prerequisites & Dependencies
 Before running the application, make sure you have **Python 3.10+** installed on your system. 
 Open your terminal in the project directory and run the following commands to install the required tools:
+
 **Install core dependencies:**
 1.   Save app_gui.py and requirements.txt in a new folder. Name it TM Add Bot or whatever you like.
    
