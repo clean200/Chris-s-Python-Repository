@@ -7,9 +7,10 @@ Open your terminal in the project directory and run the following commands to in
 
    Path to the folder location of where you saved this file and type in these two commands. This will install what you need to get this app running.
       pip install -r requirements.txt
+   
       playwright install
 
-2. 📁 File Structure & Local Storage
+3. 📁 File Structure & Local Storage
 Make sure the following files sit in the same exact folder as app_gui.py:
 
 app_gui.py — The core application script, GUI, and threading daemon.
