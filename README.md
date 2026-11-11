@@ -3,14 +3,27 @@ This complete guide covers setup, file structures, webhook configuration, and ex
 ## 🛠️ Prerequisites & Dependencies
 Before running the application, make sure you have **Python 3.10+** installed on your system. 
 Open your terminal in the project directory and run the following commands to install the required tools:
-1. **Install core dependencies:**
+**Install core dependencies:**
+1.   Save app_gui.py and requirements.txt in a new folder. Name it TM Add Bot or whatever you like.
+   
+2.  Open up command prompt. Path to the folder location of where you saved this file.
 
-   Path to the folder location of where you saved this file and type in these two commands. This will install what you need to get this app running.
+3.  Type each command into dos one at a time and hit the enter button.
+   
       pip install -r requirements.txt
    
       playwright install
+4. Type python app_gui.py and wait for the UI to load.
 
-3. 📁 File Structure & Local Storage
+5. Once the UI loads add your own discord webhook in and give it a test fire.
+
+6. Add artists name you want to search for. Start off with like 1-2 to make sure its working right.
+
+7. Start monitor. This is the step I need help with and some feedback on. If you do succesfully have playwright installed
+   and the cookies still won't load out of your local profile that is a big problem. Whenever you have to query a site like
+   TM you want to have a very nice TLS shake and to maintain current cookies no matter what TM drops on us.    
+
+📁 File Structure & Local Storage
 Make sure the following files sit in the same exact folder as app_gui.py:
 
 app_gui.py — The core application script, GUI, and threading daemon.
@@ -21,7 +34,9 @@ cookies.txt — (Auto-generated or user-provided) Stores your active Ticketmaste
 
 Note: If artists.txt or cookies.txt do not exist when you first boot the app, the system will automatically generate baseline files for you.
 
-3. ⚙️ Configuration & Customization
+⚙️ Configuration & Customization
+The easiest way to add your webhook is directly through the UI. You have a few more options though.
+
 Adding Your Discord Webhook
 To receive real-time inventory alerts straight to your Discord channel:
 
@@ -33,17 +48,8 @@ Python
 DISCORD_WEBHOOK_URL = "YOUR_WEBHOOK_URL_HERE"
 Paste your actual Discord webhook URL inside the quotes and save the file.
 
-2. Managing Your Watchlist
+Managing Your Watchlist
 You can add or remove artists dynamically straight from the graphical user interface while the app is running, or you can open artists.txt in a text editor and type your target artists manually (one per line).
 
 ▶️ Running the Application
-Once your dependencies are installed and your webhook is configured, launch the desktop dashboard by running:
 
-Bash
-python app_gui.py
-How to Use the UI:
-Watchlist Panel: View, add, or delete target artists from the sidebar.
-
-Monitor Control: Click ▶ Start Monitor to initiate the asynchronous background scan loop.
-
-Telemetry Feed: Monitor live status logs, event counts, and HTTP responses directly in the main console view.
