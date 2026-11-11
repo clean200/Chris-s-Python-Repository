@@ -1,4 +1,0 @@
-customtkinter
-playwright
-requests
-beautifulsoup4
